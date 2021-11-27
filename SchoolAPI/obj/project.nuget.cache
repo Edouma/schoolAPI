@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "x6uhzrGvy/m/q2lVgjqKgu41VcH3CJEnEHKC1mb3pihtBhZAhSLxLA6+sq8+YKYZri07CBNZCkj3c9jIc1xsAQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Edu\\source\\repos\\SchoolAPI\\SchoolAPI\\SchoolAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Edu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\Edu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Edu\\.nuget\\packages\\swashbuckle.aspnetcore\\5.6.3\\swashbuckle.aspnetcore.5.6.3.nupkg.sha512",
+    "C:\\Users\\Edu\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\5.6.3\\swashbuckle.aspnetcore.swagger.5.6.3.nupkg.sha512",
+    "C:\\Users\\Edu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\5.6.3\\swashbuckle.aspnetcore.swaggergen.5.6.3.nupkg.sha512",
+    "C:\\Users\\Edu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\5.6.3\\swashbuckle.aspnetcore.swaggerui.5.6.3.nupkg.sha512"
+  ],
+  "logs": []
+}
