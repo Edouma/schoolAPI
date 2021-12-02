@@ -1,0 +1,31 @@
+﻿using Microsoft.AspNetCore.Identity;
+using SchoolAPI.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace SchoolAPI.Repository
+{
+    public class AccountRepository: IAccountRepository
+    {
+        private readonly UserManager<ApplicationUser> _userManager;
+
+        public AccountRepository(UserManager<ApplicationUser> userManager)
+        {
+            _userManager = userManager;
+        }
+        public async Task<IdentityResult> SignUpAsync(SignUpModel signUpModel)
+        {
+            var user = new ApplicationUser()
+            {
+                FirstName = signUpModel.FirstNaame,
+                LastName = signUpModel.LastName,
+                Email = signUpModel.Email,
+                UserName = signUpModel.Email
+            };
+
+            return await _userManager.CreateAsync(user,signUpModel.Password);
+        }
+    }
+}

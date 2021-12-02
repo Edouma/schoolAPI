@@ -52,6 +52,6 @@ namespace SchoolAPI.Controllers
             _context.Delete(id);
             return Ok();
         }
-
+        
     }
 }
