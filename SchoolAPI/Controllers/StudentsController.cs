@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using SchoolAPI.Data;
 using SchoolAPI.Repository;
 
@@ -6,6 +7,7 @@ namespace SchoolAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    //[Authorize]
     public class StudentsController : ControllerBase
     {
         private readonly IstudentRepository _context;
