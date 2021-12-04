@@ -1,4 +1,5 @@
-﻿using SchoolAPI.Data;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using SchoolAPI.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -46,6 +47,18 @@ namespace SchoolAPI.Repository
             }
             
             return registerChanges;
+        }
+
+        public Student UpdatePatch(int id, JsonPatchDocument registerChanges)
+        {
+            var Student = _context.Students.Find(id);
+
+            if (Student !=null)
+            {
+                registerChanges.ApplyTo(Student);
+                _context.SaveChanges();
+            }
+            return Student;
         }
 
         public Student Delete(int id)

@@ -1,8 +1,6 @@
-﻿using SchoolAPI.Data;
-using System;
+﻿using Microsoft.AspNetCore.JsonPatch;
+using SchoolAPI.Data;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace SchoolAPI.Repository
 {
@@ -12,6 +10,7 @@ namespace SchoolAPI.Repository
         Student Add(Student register);
         Student GetStudentById(int id);
         Student Update(int id, Student registerChanges);
+        Student UpdatePatch(int id, JsonPatchDocument registerChanges);
         Student Delete(int id);
 
     }

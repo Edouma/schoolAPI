@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
 using SchoolAPI.Data;
 using SchoolAPI.Repository;
@@ -48,6 +49,14 @@ namespace SchoolAPI.Controllers
             var student = _context.Update(id, studentModel);
             return Ok(student);
         }
+
+        [HttpPatch("{id}")]
+        public IActionResult UpdateStudentPatch([FromBody] JsonPatchDocument studentModel, [FromRoute] int id)
+        {
+            var student = _context.UpdatePatch(id, studentModel);
+            return Ok(student);
+        }
+
         [HttpDelete("{id}")]
         public IActionResult Delete([FromRoute] int id)
         {
