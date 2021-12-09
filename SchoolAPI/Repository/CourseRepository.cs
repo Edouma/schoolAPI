@@ -37,6 +37,7 @@ namespace SchoolAPI.Repository
         public Course GetCourseById(int id)
         {
             return _context.Courses.Find(id);
+                      
         }
 
         public IEnumerable<Course> GetAllCourses()

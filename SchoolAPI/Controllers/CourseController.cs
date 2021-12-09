@@ -16,17 +16,18 @@ namespace SchoolAPI.Controllers
             _context = context;
         }
 
-        [HttpGet("")]
+        [HttpGet("Get-All-Courses")]
         public IActionResult GetAllCourses()
         {
             var courses = _context.GetAllCourses();
             return Ok(courses);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet("CourseById/{id}")]
         public IActionResult GetCourseById([FromRoute] int id)
         {
             var course = _context.GetCourseById(id);
+
             return Ok(course);
         }
 

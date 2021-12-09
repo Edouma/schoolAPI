@@ -75,6 +75,7 @@ namespace SchoolAPI
             services.AddScoped<IstudentRepository, studentRepository>();
             services.AddScoped<IAccountRepository, AccountRepository>();
             services.AddScoped<ICourseRepository, CourseRepository>();
+            services.AddScoped<IFeeRepository, FeeRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
